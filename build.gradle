@@ -4,8 +4,11 @@ buildscript {
     ext.kotlin_version = "1.5.21"
     ext.gradle_version = "4.2.1"
     ext.nav_version = "2.3.5"
-    //versions here are declared in app level
     ext.room_version = "2.2.6"
+    ext.koin_version = "3.1.4"
+    ext.retrofit_version = "2.8.1"
+    ext.call_adapter_version = "4.1.0"
+    ext.stetho_version = "1.5.1"
     repositories {
         google()
         mavenCentral()
@@ -24,7 +27,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
     }
 }
 
