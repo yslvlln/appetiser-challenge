@@ -75,4 +75,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     //Retrofit call adapter
     implementation "com.github.haroldadmin:NetworkResponseAdapter:$call_adapter_version"
+
+    //Stetho
+    implementation "com.facebook.stetho:stetho:$stetho_version"
+    implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
 }

@@ -1,7 +1,9 @@
-package com.challenge.itunes
+package com.challenge.itunes.di
 
+import com.challenge.itunes.BuildConfig
 import com.challenge.itunes.data.ItunesApiService
 import com.challenge.itunes.utilities.REQUEST_TIME_OUT
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.GsonBuilder
 import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory
 import okhttp3.OkHttpClient
@@ -40,7 +42,7 @@ private fun provideOkHttpClient(): OkHttpClient {
         requestBuilder.addHeader("Content-Type", "application/json")
         val request = requestBuilder.method(original.method(), original.body()).build()
         return@addInterceptor it.proceed(request)
-    }.build()
+    }.addNetworkInterceptor(StethoInterceptor()).build()
 }
 
 private fun provideApiService(retrofit: Retrofit): ItunesApiService = retrofit.create(ItunesApiService::class.java)

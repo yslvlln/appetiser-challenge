@@ -8,6 +8,7 @@ buildscript {
     ext.koin_version = "3.1.4"
     ext.retrofit_version = "2.8.1"
     ext.call_adapter_version = "4.1.0"
+    ext.stetho_version = "1.5.1"
     repositories {
         google()
         mavenCentral()
