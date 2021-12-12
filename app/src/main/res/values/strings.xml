@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Itunes Challenge</string>
+
+    <!-- app strings -->
+    <string name="melo">melo</string>
+    <string name="ola">Ola!</string>
+    <string name="greetings">Here for some music   ♫♩♪♬</string>
+    <string name="search_placeholder">Search by artist, song, or album</string>
 </resources>
