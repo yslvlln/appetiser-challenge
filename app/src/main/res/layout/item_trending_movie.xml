@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_20sdp"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_5sdp"
+    android:clipToPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/movie_logo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="center"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintEnd_toStartOf="@id/movie_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:lines="1"
+            android:maxLines="1"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="@dimen/_15ssp"
+            app:autoSizeMinTextSize="@dimen/_12ssp"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/movie_logo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:alpha="0.4"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintTop_toBottomOf="@id/movie_name"
+            app:layout_constraintStart_toEndOf="@id/movie_logo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:alpha="0.4"
+            android:lines="3"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@id/movie_see_more"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintTop_toBottomOf="@id/movie_category"
+            app:layout_constraintStart_toEndOf="@id/movie_logo"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_see_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/illicit_purple"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/see_more"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintStart_toEndOf="@id/movie_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

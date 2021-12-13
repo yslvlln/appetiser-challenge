@@ -2,7 +2,7 @@ package com.challenge.itunes.di
 
 import com.challenge.itunes.BuildConfig
 import com.challenge.itunes.data.ItunesApiService
-import com.challenge.itunes.utilities.REQUEST_TIME_OUT
+import com.challenge.itunes.utilities.constant.REQUEST_TIME_OUT
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.google.gson.GsonBuilder
 import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory

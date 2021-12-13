@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.challenge.itunes.view.ListFragment"
+        android:name="com.challenge.itunes.view.list.ListFragment"
         android:label="fragment_list"
         tools:layout="@layout/fragment_list" />
 </navigation>

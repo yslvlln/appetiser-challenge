@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.challenge.itunes.R
-import com.challenge.itunes.utilities.SPLASH_TIME
+import com.challenge.itunes.utilities.constant.SPLASH_TIME
 import com.challenge.itunes.utilities.extension.hideToolbar
 import com.challenge.itunes.utilities.extension.redirect
 import kotlinx.coroutines.delay

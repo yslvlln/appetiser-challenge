@@ -4,6 +4,9 @@
     <!-- app strings -->
     <string name="melo">melo</string>
     <string name="ola">Ola!</string>
-    <string name="greetings">Here for some music   ♫♩♪♬</string>
-    <string name="search_placeholder">Search by artist, song, or album</string>
+    <string name="greetings">Here for some movies   ♫♩♪♬</string>
+    <string name="search_placeholder">Search by artist, movie, or album</string>
+    <string name="editors_choice">Editors\' choice</string>
+    <string name="dollar_sign">$</string>
+    <string name="see_more"><u><![CDATA[See more >]]></u></string>
 </resources>
