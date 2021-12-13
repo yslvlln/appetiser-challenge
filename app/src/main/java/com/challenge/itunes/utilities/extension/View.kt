@@ -1,12 +1,13 @@
 package com.challenge.itunes.utilities.extension
 
 import android.os.SystemClock
-import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
-import androidx.core.view.isVisible
-import androidx.transition.Slide
-import androidx.transition.TransitionManager
+import androidx.appcompat.widget.AppCompatImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.bumptech.glide.request.RequestOptions
 
 
 fun View.setSafeOnClickListener(debounceTime: Long = 500L, action: () -> Unit) {
@@ -35,11 +36,12 @@ fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
-fun View.slideDown(parent: ViewGroup) {
-    val transition = Slide(Gravity.BOTTOM)
-    transition.duration = 600
-    transition.addTarget(this)
-
-    TransitionManager.beginDelayedTransition(parent, transition)
-    this.visibility = if (this.isVisible) View.VISIBLE else View.GONE
+fun AppCompatImageView.loadWithCornerRadius(imageUrl: String?, cornerRadius: Int) {
+    if (imageUrl == null || imageUrl.isEmpty()) return
+    Glide.with(context)
+        .load(imageUrl)
+        .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
+        .transition(DrawableTransitionOptions.withCrossFade())
+        .apply(RequestOptions.bitmapTransform(RoundedCorners(cornerRadius)))
+        .into(this)
 }

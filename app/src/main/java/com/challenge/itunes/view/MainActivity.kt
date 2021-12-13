@@ -1,18 +1,18 @@
 package com.challenge.itunes.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.challenge.itunes.R
+import com.challenge.itunes.utilities.constant.DEFAULT_TAG
 import com.challenge.itunes.viewmodel.ItunesMainViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
-
-    private val viewModel: ItunesMainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        viewModel.getAllMusic()
+        Log.d(DEFAULT_TAG, "We're up")
     }
 
     private fun setupUi() {
