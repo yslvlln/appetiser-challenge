@@ -1,6 +1,7 @@
 package com.challenge.itunes
 
 import android.app.Application
+import com.challenge.itunes.di.dbModule
 import com.challenge.itunes.di.networkModule
 import com.challenge.itunes.di.repoModule
 import com.challenge.itunes.di.vmModule
@@ -10,7 +11,7 @@ import org.koin.core.context.startKoin
 
 class ItunesApplication: Application() {
 
-    private val koinModules = listOf(repoModule, vmModule, networkModule)
+    private val koinModules = listOf(repoModule, vmModule, networkModule, dbModule)
 
     override fun onCreate() {
         super.onCreate()
