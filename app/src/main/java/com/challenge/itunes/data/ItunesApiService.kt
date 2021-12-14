@@ -14,6 +14,6 @@ interface ItunesApiService {
         @Query("media") media: String = "movie",
         @Query("attribute") attr: String = "ratingTerm",
         @Query("limit") limit: Int = 3
-    ): NetworkResponse<MovieResponse, Any>
+    ): NetworkResponse<MovieResponse, String>
 
 }

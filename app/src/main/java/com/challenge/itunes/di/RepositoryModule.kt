@@ -5,5 +5,5 @@ import com.challenge.itunes.data.repository.ItunesRepositoryImpl
 import org.koin.dsl.module
 
 val repoModule = module {
-    single<ItunesRepository> { ItunesRepositoryImpl(apiService = get()) }
+    single<ItunesRepository> { ItunesRepositoryImpl(apiService = get(), movieDao = get()) }
 }

@@ -6,7 +6,8 @@
     <string name="ola">Ola!</string>
     <string name="greetings">Here for some movies   ♫♩♪♬</string>
     <string name="search_placeholder">Search by artist, movie, or album</string>
-    <string name="editors_choice">Editors\' choice</string>
+    <string name="trending_movies">Trending Now</string>
     <string name="dollar_sign">$</string>
     <string name="see_more"><u><![CDATA[See more >]]></u></string>
+    <string name="empty_list_placeholder">Oops! There\'s nothing here. \nPlease come back later.</string>
 </resources>
