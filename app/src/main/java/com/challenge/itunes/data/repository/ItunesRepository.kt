@@ -1,12 +1,16 @@
 package com.challenge.itunes.data.repository
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.challenge.itunes.data.model.MovieResponse
-import com.challenge.itunes.data.model.MovieResponseResults
+import com.challenge.itunes.data.model.RecoMoviesResponse
+import com.challenge.itunes.data.model.RecoMoviesResponseResult
+import com.challenge.itunes.data.model.TrendMoviesResponse
+import com.challenge.itunes.data.model.TrendMoviesResponseResult
 import com.haroldadmin.cnradapter.NetworkResponse
 
 interface ItunesRepository {
-    suspend fun getTrendMoviesCache(category: String): List<MovieResponseResults>
-    suspend fun getTrendingMovies(category: String): NetworkResponse<MovieResponse, String>
+    suspend fun getTrendMoviesCache(category: String): List<TrendMoviesResponseResult>
+    suspend fun getTrendingMovies(category: String): NetworkResponse<TrendMoviesResponse, String>
+    suspend fun getRecommendedCache(): List<RecoMoviesResponseResult>
+    suspend fun getRecommendedMovies(): NetworkResponse<RecoMoviesResponse, String>
+    fun searchRecoMovies(searchString: String): LiveData<List<RecoMoviesResponseResult>>
 }

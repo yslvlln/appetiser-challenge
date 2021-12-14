@@ -1,4 +1,4 @@
-package com.challenge.itunes.view
+package com.challenge.itunes.view.splash
 
 import android.os.Bundle
 import android.view.LayoutInflater

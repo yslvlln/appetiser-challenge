@@ -42,19 +42,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@id/greeting_tv1"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/search_btn"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_20sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:tint="@color/illicit_purple"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_search"
-        app:layout_constraintTop_toTopOf="@id/greeting_tv1"
-        app:layout_constraintBottom_toBottomOf="@id/greeting_tv2"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <View
         android:id="@+id/view_1"
         android:layout_width="0dp"
@@ -109,6 +96,7 @@
         android:id="@+id/trend_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="@+id/main_list_scroll"
         app:layout_constraintStart_toStartOf="@+id/main_list_scroll"
         app:layout_constraintEnd_toEndOf="@+id/main_list_scroll"
@@ -118,6 +106,7 @@
         android:id="@+id/empty_list_layout"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:visibility="gone"
         layout="@layout/empty_list_layout"
         app:layout_constraintTop_toBottomOf="@id/rv_trending_category"
         app:layout_constraintEnd_toEndOf="parent"

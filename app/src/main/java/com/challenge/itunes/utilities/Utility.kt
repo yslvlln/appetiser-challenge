@@ -1,10 +1,22 @@
 package com.challenge.itunes.utilities
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import androidx.core.content.ContextCompat
 import com.challenge.itunes.utilities.constant.colors
 import com.haroldadmin.cnradapter.NetworkResponse
+import java.lang.ref.WeakReference
 
 fun randomizeColor(): Int {
     return colors.random()
+}
+
+fun openInBrowser(context: Context, url: String) {
+    val mUrl = url.replace("https://", "http://")
+    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(mUrl))
+    ContextCompat.startActivity(context, browserIntent, Bundle())
 }
 
 fun <T : Any> handleServerError(resp: NetworkResponse.ServerError<T>): NetworkResponse.ServerError<T>  {

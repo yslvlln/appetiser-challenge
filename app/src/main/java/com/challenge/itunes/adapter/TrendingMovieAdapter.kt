@@ -9,9 +9,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.challenge.itunes.data.model.MovieResponseResults
+import com.challenge.itunes.data.model.TrendMoviesResponseResult
 import com.challenge.itunes.databinding.ItemTrendingMovieBinding
-import com.challenge.itunes.utilities.MovieDiffUtil
 import com.challenge.itunes.utilities.extension.gone
 import com.challenge.itunes.utilities.extension.loadWithCornerRadius
 import com.challenge.itunes.utilities.extension.setSafeOnClickListener
@@ -19,14 +18,15 @@ import com.challenge.itunes.utilities.extension.visible
 
 class TrendingMovieAdapter(private val context: Context): RecyclerView.Adapter<TrendingMovieAdapter.ViewHolder>() {
 
-    private var mDataList = emptyList<MovieResponseResults>()
+    private var mDataList = emptyList<TrendMoviesResponseResult>()
 
     inner class ViewHolder(private val bind: ItemTrendingMovieBinding): RecyclerView.ViewHolder(bind.root) {
-        fun bindItem(data: MovieResponseResults) {
+        fun bindItem(data: TrendMoviesResponseResult) {
             bind.movieLogo.loadWithCornerRadius(data.artworkUrl100, 20)
             bind.movieCategory.text = data.primaryGenreName
             bind.movieDesc.text = data.shortDesc ?: data.longDesc
             bind.movieName.text = data.trackName
+            "$${data.trackPrice}".also { bind.moviePrice.text = it }
             if (data.seeMore.isNullOrEmpty()) {
                 bind.movieSeeMore.gone()
             } else {
@@ -61,8 +61,8 @@ class TrendingMovieAdapter(private val context: Context): RecyclerView.Adapter<T
         startActivity(context, browserIntent, Bundle())
     }
 
-    fun setData(data: List<MovieResponseResults>) {
-        val toDoDiffUtil = MovieDiffUtil(mDataList, data)
+    fun setData(data: List<TrendMoviesResponseResult>) {
+        val toDoDiffUtil = TrendDiffUtil(mDataList, data)
         val toDoDiffResult = DiffUtil.calculateDiff(toDoDiffUtil)
         mDataList = data
         toDoDiffResult.dispatchUpdatesTo(this)
