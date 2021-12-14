@@ -1,11 +1,11 @@
-package com.challenge.itunes.utilities
+package com.challenge.itunes.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.challenge.itunes.data.model.MovieResponseResults
+import com.challenge.itunes.data.model.RecoMoviesResponseResult
 
-class MovieDiffUtil(
-    private val oldList: List<MovieResponseResults>,
-    private val newList: List<MovieResponseResults>
+class RecoDiffUtil(
+    private val oldList: List<RecoMoviesResponseResult>,
+    private val newList: List<RecoMoviesResponseResult>
 ): DiffUtil.Callback() {
 
     override fun getOldListSize(): Int = oldList.size

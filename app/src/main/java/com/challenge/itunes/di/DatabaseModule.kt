@@ -11,6 +11,7 @@ val dbModule = module {
     single { provideDatabase(androidApplication()) }
     single { provideMovieDao(database = get()) }
 }
+
 @Volatile
 private var INSTANCE: MovieDataBase? = null
 
@@ -24,12 +25,14 @@ private fun provideDatabase(application: Application): MovieDataBase {
             application.applicationContext,
             MovieDataBase::class.java,
             "movie_database"
-        ).build()
+        )
+            .fallbackToDestructiveMigration()
+            .build()
         INSTANCE = instance
         return instance
     }
 }
 
 private fun provideMovieDao(database: MovieDataBase): MovieDao {
-    return  database.movieDao()
+    return database.movieDao()
 }

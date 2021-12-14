@@ -10,4 +10,10 @@
     <string name="dollar_sign">$</string>
     <string name="see_more"><u><![CDATA[See more >]]></u></string>
     <string name="empty_list_placeholder">Oops! There\'s nothing here. \nPlease come back later.</string>
+    <string name="recommended_placeholder_1">Not sure what to watch?</string>
+    <string name="recommended_placeholder_2">Checkout our recommended movies!</string>
+    <string name="take_me">Take me</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
 </resources>

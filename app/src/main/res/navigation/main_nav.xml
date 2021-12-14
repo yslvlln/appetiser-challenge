@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.challenge.itunes.view.SplashFragment"
+        android:name="com.challenge.itunes.view.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -24,5 +24,17 @@
         android:id="@+id/listFragment"
         android:name="com.challenge.itunes.view.list.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_recommendedFragment"
+            app:destination="@id/recommendedFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendedFragment"
+        android:name="com.challenge.itunes.view.recommended.RecommendedFragment"
+        android:label="Recommended Movies" />
 </navigation>

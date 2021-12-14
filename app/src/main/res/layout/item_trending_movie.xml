@@ -28,6 +28,23 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_logo_placeholder"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="@dimen/_10ssp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/black"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="@dimen/_9ssp"
+            app:autoSizeMinTextSize="@dimen/_6ssp"
+            app:autoSizeStepGranularity="@dimen/_1ssp"
+            app:layout_constraintEnd_toEndOf="@id/movie_logo"
+            app:layout_constraintStart_toStartOf="@id/movie_logo"
+            app:layout_constraintTop_toTopOf="@+id/movie_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_logo"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/movie_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,9 +56,10 @@
             android:layout_marginEnd="@dimen/_8sdp"
             android:lines="1"
             android:maxLines="1"
+            android:ellipsize="end"
             app:autoSizeTextType="uniform"
             app:autoSizeMaxTextSize="@dimen/_15ssp"
-            app:autoSizeMinTextSize="@dimen/_12ssp"
+            app:autoSizeMinTextSize="@dimen/_9ssp"
             app:layout_constraintHorizontal_weight="7"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/movie_logo"
@@ -57,6 +75,9 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
             android:alpha="0.4"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="@dimen/_9ssp"
+            app:autoSizeMinTextSize="@dimen/_6ssp"
             app:layout_constraintHorizontal_weight="7"
             app:layout_constraintTop_toBottomOf="@id/movie_name"
             app:layout_constraintStart_toEndOf="@id/movie_logo"
@@ -72,9 +93,12 @@
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginEnd="@dimen/_8sdp"
             android:alpha="0.4"
-            android:lines="3"
-            android:maxLines="3"
+            android:lines="2"
+            android:maxLines="2"
             android:ellipsize="end"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMaxTextSize="@dimen/_9ssp"
+            app:autoSizeMinTextSize="@dimen/_6ssp"
             app:layout_constraintVertical_bias="0.0"
             app:layout_constraintBottom_toTopOf="@id/movie_see_more"
             app:layout_constraintHorizontal_weight="7"
@@ -96,6 +120,21 @@
             android:layout_marginBottom="@dimen/_8sdp"
             app:layout_constraintStart_toEndOf="@id/movie_logo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/movie_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/black"
+            android:gravity="end"
+            android:alpha="0.4"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:layout_constraintStart_toEndOf="@id/movie_logo"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
